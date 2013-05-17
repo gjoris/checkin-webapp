@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_eu_droidit_blog_checkin_model_CheckinUser" items="${checkinusers}" z="YlFlykPCCTuZmjRHsrWPUMPu7gE=">
+        <table:table data="${checkinusers}" id="l_eu_droidit_blog_checkin_model_CheckinUser" path="/checkinusers" z="VF/HnohD3HJ98Md9ZmPUdmwS+SU=">
+            <table:column id="c_eu_droidit_blog_checkin_model_CheckinUser_username" property="username" z="20CmnGFChH/oc+xxad500LWmzOo="/>
+            <table:column id="c_eu_droidit_blog_checkin_model_CheckinUser_password" property="password" z="rALD/qeX16IMyB4hnqAXQcAgrAU="/>
+            <table:column id="c_eu_droidit_blog_checkin_model_CheckinUser_profile" property="profile" z="zPhlHczOsPuFCdt0HMg0DOrR+BA="/>
+        </table:table>
+    </page:list>
+</div>
