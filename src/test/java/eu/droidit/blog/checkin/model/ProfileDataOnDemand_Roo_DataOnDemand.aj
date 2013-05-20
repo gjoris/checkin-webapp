@@ -8,7 +8,9 @@ import eu.droidit.blog.checkin.model.Profile;
 import eu.droidit.blog.checkin.model.ProfileDataOnDemand;
 import java.security.SecureRandom;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
@@ -32,6 +34,8 @@ privileged aspect ProfileDataOnDemand_Roo_DataOnDemand {
         Profile obj = new Profile();
         setComments(obj, index);
         setDateOfBirth(obj, index);
+        setFirstName(obj, index);
+        setLastName(obj, index);
         return obj;
     }
     
@@ -44,8 +48,18 @@ privileged aspect ProfileDataOnDemand_Roo_DataOnDemand {
     }
     
     public void ProfileDataOnDemand.setDateOfBirth(Profile obj, int index) {
-        Date dateOfBirth = new Date(new Date().getTime() - 10000000L);
+        Date dateOfBirth = new GregorianCalendar(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH), Calendar.getInstance().get(Calendar.DAY_OF_MONTH), Calendar.getInstance().get(Calendar.HOUR_OF_DAY), Calendar.getInstance().get(Calendar.MINUTE), Calendar.getInstance().get(Calendar.SECOND) + new Double(Math.random() * 1000).intValue()).getTime();
         obj.setDateOfBirth(dateOfBirth);
+    }
+    
+    public void ProfileDataOnDemand.setFirstName(Profile obj, int index) {
+        String firstName = "firstName_" + index;
+        obj.setFirstName(firstName);
+    }
+    
+    public void ProfileDataOnDemand.setLastName(Profile obj, int index) {
+        String lastName = "lastName_" + index;
+        obj.setLastName(lastName);
     }
     
     public Profile ProfileDataOnDemand.getSpecificProfile(int index) {

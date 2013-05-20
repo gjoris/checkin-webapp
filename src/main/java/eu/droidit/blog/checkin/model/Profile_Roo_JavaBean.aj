@@ -9,6 +9,22 @@ import java.util.Date;
 
 privileged aspect Profile_Roo_JavaBean {
     
+    public String Profile.getFirstName() {
+        return this.firstName;
+    }
+    
+    public void Profile.setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+    
+    public String Profile.getLastName() {
+        return this.lastName;
+    }
+    
+    public void Profile.setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+    
     public Date Profile.getDateOfBirth() {
         return this.dateOfBirth;
     }
@@ -17,20 +33,20 @@ privileged aspect Profile_Roo_JavaBean {
         this.dateOfBirth = dateOfBirth;
     }
     
-    public String Profile.getComments() {
-        return this.comments;
-    }
-    
-    public void Profile.setComments(String comments) {
-        this.comments = comments;
-    }
-    
     public CheckinUser Profile.getCheckinUser() {
         return this.checkinUser;
     }
     
     public void Profile.setCheckinUser(CheckinUser checkinUser) {
         this.checkinUser = checkinUser;
+    }
+    
+    public String Profile.getComments() {
+        return this.comments;
+    }
+    
+    public void Profile.setComments(String comments) {
+        this.comments = comments;
     }
     
 }

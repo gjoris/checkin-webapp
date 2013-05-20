@@ -8,12 +8,12 @@ import eu.droidit.blog.checkin.model.Profile;
 
 privileged aspect CheckinUser_Roo_JavaBean {
     
-    public String CheckinUser.getUsername() {
-        return this.username;
+    public String CheckinUser.getUserName() {
+        return this.userName;
     }
     
-    public void CheckinUser.setUsername(String username) {
-        this.username = username;
+    public void CheckinUser.setUserName(String userName) {
+        this.userName = userName;
     }
     
     public String CheckinUser.getPassword() {

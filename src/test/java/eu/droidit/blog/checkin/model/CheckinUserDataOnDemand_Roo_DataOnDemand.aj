@@ -30,7 +30,7 @@ privileged aspect CheckinUserDataOnDemand_Roo_DataOnDemand {
     public CheckinUser CheckinUserDataOnDemand.getNewTransientCheckinUser(int index) {
         CheckinUser obj = new CheckinUser();
         setPassword(obj, index);
-        setUsername(obj, index);
+        setUserName(obj, index);
         return obj;
     }
     
@@ -39,9 +39,9 @@ privileged aspect CheckinUserDataOnDemand_Roo_DataOnDemand {
         obj.setPassword(password);
     }
     
-    public void CheckinUserDataOnDemand.setUsername(CheckinUser obj, int index) {
-        String username = "username_" + index;
-        obj.setUsername(username);
+    public void CheckinUserDataOnDemand.setUserName(CheckinUser obj, int index) {
+        String userName = "userName_" + index;
+        obj.setUserName(userName);
     }
     
     public CheckinUser CheckinUserDataOnDemand.getSpecificCheckinUser(int index) {
