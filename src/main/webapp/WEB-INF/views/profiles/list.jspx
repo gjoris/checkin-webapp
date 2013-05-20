@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_eu_droidit_blog_checkin_model_Profile" items="${profiles}" z="XwD9QNSYeyLdM8m7XywtJdz3+bI=">
+        <table:table data="${profiles}" id="l_eu_droidit_blog_checkin_model_Profile" path="/profiles" z="bYdurco0Gf6yE0/4Gwcy9WevIlk=">
+            <table:column id="c_eu_droidit_blog_checkin_model_Profile_firstName" property="firstName" z="ZI5gpIIhaJjWMdMuDDiJF7OPxxg="/>
+            <table:column id="c_eu_droidit_blog_checkin_model_Profile_lastName" property="lastName" z="SrDB9zocBeOYO5LlRuA2TEAzcqI="/>
+            <table:column date="true" dateTimePattern="${profile_dateofbirth_date_format}" id="c_eu_droidit_blog_checkin_model_Profile_dateOfBirth" property="dateOfBirth" z="C/tZqbsUIl816L1VzUAQHLCkC1M="/>
+            <table:column id="c_eu_droidit_blog_checkin_model_Profile_checkinUser" property="checkinUser" z="hiUmdBX2VV4Cse9HxCsiJKi8v20="/>
+            <table:column id="c_eu_droidit_blog_checkin_model_Profile_comments" property="comments" z="MSQqI4WN1+cZLvTGR5ZFr1nwuoY="/>
+        </table:table>
+    </page:list>
+</div>
