@@ -1,0 +1,23 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0" xmlns:spring="http://www.springframework.org/tags"
+          xmlns:js="urn:jsptagdir:/WEB-INF/tags/util/js">
+
+    <spring:url value="/resources/js/jquery-1.9.1.min.js" var="jquery_url" />
+    <spring:url value="/resources/js/jquery-ui.min.js" var="jquery_ui_url"/>
+    <spring:url value="/resources/styles/bootstrap/js/bootstrap.min.js" var="bootstrap_js_url"/>
+
+    <spring:url value="/resources/styles/bootstrap/css/bootstrap.min.css" var="bootstrap_url" />
+    <spring:url value="/resources/styles/bootstrap/css/bootstrap-responsive.min.css" var="bootstrap_responsive_url" />
+    <spring:url value="/resources/styles/jquery-ui.css" var="jquery_ui_css_url"/>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="${bootstrap_url}" />
+    <link rel="stylesheet" type="text/css" media="screen" href="${bootstrap_responsive_url}" />
+    <link rel="stylesheet" type="text/css" media="screen" href="${jquery_ui_css_url}" />
+
+    <js:favicon />
+
+    <js:userlocale />
+
+    <script src="${jquery_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
+    <script src="${jquery_ui_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
+    <script src="${bootstrap_js_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
+</jsp:root>

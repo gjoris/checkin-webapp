@@ -1,0 +1,4 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0" xmlns:spring="http://www.springframework.org/tags">
+    <spring:url value="/resources/images/favicon.ico" var="favicon" />
+    <link rel="SHORTCUT ICON" href="${favicon}" />
+</jsp:root>
